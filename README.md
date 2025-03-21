@@ -48,14 +48,6 @@ npm start
 3. Navigate to `http://localhost:3000` in your browser
 4. Create a new vault or authenticate with an existing one
 
-## Configuration
-
-You can configure the UI by editing the `.env` file:
-
-```
-REACT_APP_API_URL=http://localhost:3200/api
-REACT_APP_SESSION_TIMEOUT=15
-```
 
 ## Screenshots
 
