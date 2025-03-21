@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Secret Manager UI
 
-## Getting Started
+A modern web interface for the SecretKeeper password vault application. This UI provides a user-friendly way to interact with the SecretKeeper API, allowing you to securely manage your credentials with an intuitive interface.
 
-First, run the development server:
+![Secret Manager UI](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/dashboard.png)
+
+## Features
+
+- **Intuitive Dashboard**: Clean interface for managing all your credentials
+- **Secure Authentication**: Interface to the SecretKeeper vault authentication
+- **Credential Management**: Add, view, edit, and delete credentials with ease
+- **Password Generation**: Generate strong passwords with customizable options
+- **Vault Health Analysis**: Visual reports on password strength and security
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+
+## ⚠️ Important Security Note
+
+**The authentication implementation using local storage in this UI is for demonstration purposes only.**
+
+In a production environment, you should implement proper authentication using:
+- HTTP-only cookies
+- Server-side sessions
+- JWT with proper security measures
+- Token refresh mechanisms
+
+Local storage is vulnerable to XSS attacks and should not be used to store sensitive authentication tokens in real-world applications.
+
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/codersaadi/secret-manager-ui.git
+
+# Change to the directory
+cd secret-manager-ui
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Start the SecretKeeper API server (see [SecretKeeper repository](https://github.com/codersaadi/secretkeeper))
+2. Run the Secret Manager UI development server
+3. Navigate to `http://localhost:3000` in your browser
+4. Create a new vault or authenticate with an existing one
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configuration
 
-## Learn More
+You can configure the UI by editing the `.env` file:
 
-To learn more about Next.js, take a look at the following resources:
+```
+REACT_APP_API_URL=http://localhost:3200/api
+REACT_APP_SESSION_TIMEOUT=15
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Login Screen
+![Login Screen](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/login.png)
 
-## Deploy on Vercel
+### Dashboard
+![Dashboard](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/dashboard.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Add Credential
+![Add Credential](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/add-credential.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Password Generator
+![Password Generator](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/password-generator.png)
+
+## Connecting to SecretKeeper API
+
+This UI is designed to work with the [SecretKeeper](https://github.com/codersaadi/secretkeeper) backend. Make sure you have the SecretKeeper server running and properly configured.
+
+You can adjust the API URL in the `.env` file if your SecretKeeper instance is running on a different host or port.
+
+## Technologies Used
+
+- React.js
+- React Router
+- Redux for state management
+- Axios for API communication
+- styled-components for styling
+- Material UI components
+- Chart.js for security visualizations
+
+## Development
+
+### Available Scripts
+
+- `npm start`: Run the development server
+- `npm test`: Run tests
+- `npm run build`: Build for production
+- `npm run eject`: Eject from Create React App
+
+### Folder Structure
+
+```
+secret-manager-ui/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── store/
+│   ├── utils/
+│   ├── App.js
+│   └── index.js
+└── package.json
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[MIT License](LICENSE)
+
+## Related Projects
+
+- [SecretKeeper API](https://github.com/codersaadi/secretkeeper): The backend API service for this UI
