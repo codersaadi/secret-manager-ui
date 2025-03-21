@@ -2,7 +2,7 @@
 
 A modern web interface for the SecretKeeper password vault application. This UI provides a user-friendly way to interact with the SecretKeeper API, allowing you to securely manage your credentials with an intuitive interface.
 
-![Secret Manager UI](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/dashboard.png)
+![Secret Manager UI](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/secret-view.png)
 
 ## Features
 
@@ -60,16 +60,22 @@ REACT_APP_SESSION_TIMEOUT=15
 ## Screenshots
 
 ### Login Screen
-![Login Screen](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/login.png)
+![Login Screen](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/welcome-login.png)
 
-### Dashboard
-![Dashboard](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/dashboard.png)
+### Secret View
+![Secret View](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/secret-view.png)
 
-### Add Credential
-![Add Credential](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/add-credential.png)
+### Add Secret
+![Add Secret](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/addsecret.png)
 
-### Password Generator
-![Password Generator](https://github.com/codersaadi/secret-manager-ui/raw/main/screenshots/password-generator.png)
+### Edit Secret
+![Edit Secret](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/editsecret.png)
+
+### Backup
+![Backup](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/backup.png)
+
+### Settings
+![Settings](https://github.com/codersaadi/secret-manager-ui/raw/main/public/screenshots/settings.png)
 
 ## Connecting to SecretKeeper API
 
@@ -98,18 +104,6 @@ You can adjust the API URL in the `.env` file if your SecretKeeper instance is r
 
 ### Folder Structure
 
-```
-secret-manager-ui/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   ├── store/
-│   ├── utils/
-│   ├── App.js
-│   └── index.js
-└── package.json
 ```
 
 ## Contributing
