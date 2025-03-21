@@ -86,12 +86,8 @@ You can adjust the API URL in the `.env` file if your SecretKeeper instance is r
 ## Technologies Used
 
 - React.js
-- React Router
-- Redux for state management
+- Next.js
 - Axios for API communication
-- styled-components for styling
-- Material UI components
-- Chart.js for security visualizations
 
 ## Development
 
